@@ -1,0 +1,8 @@
+<mvc:View controllerName="capgemini.sa.finance.controller.App" 
+xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+  <!-- This container control will have all the view embeded into 
+  it and we write the code of "embedding view into it" in component.js  -->
+
+    <!-- <App id = "appCon"/> -->
+    <SplitApp id="Sappcon"></SplitApp>
+</mvc:View>

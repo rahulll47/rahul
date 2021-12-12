@@ -1,0 +1,161 @@
+<mvc:View
+    controllerName="rahul.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:t="sap.ui.table"
+>
+
+<t:Table rows="{/EmployeeData}" visibleRowCount="4" selectionMode="Single" rowSelectionChange="onRowSelect" >
+    <!-- This "t" is because, aggregation "coloumns" will follow the parent class/control ("Table") namespace -->
+          <t:columns>
+            <!-- This t is because, Coloumn control belongs to thr library whose namsespace is "t" -->
+              <t:Column label = "Name of Employee">
+              <!-- This "t" is because, aggregation "template" will follow the parent class/control ("Coloum") namespace -->
+                   <t:template>
+                      <!-- <Input value="{Name}"/> -->
+                      <Input value="{path:'Name',formatter:'.Formatter.myFormatterFunction'}"/>
+                      
+                   </t:template>
+              </t:Column>
+
+
+
+              <t:Column >
+              <!-- This "t" is because, aggregation "label" will follow the parent class/control ("Coloum") namespace -->
+                  <t:label>
+                     <Label text = "Salary of Employee"></Label>
+                  </t:label>  
+                  <t:template>
+                      <Text text="{
+                          parts: [{path :'Salary'},{path :'Currency'}],
+                          formatter:'.Formatter.formatTheCurrency'}"></Text>
+                      <!-- <Text text="{Salary} {Currency}"></Text> -->
+                      <!-- <Text text="{Salary} {ID}"></Text> -->
+                  </t:template>
+              </t:Column>
+
+
+
+              
+              <t:Column label = "{i18n>XLBL_EmpID}" >
+                   <t:template>
+                      <Text text="{ID}"></Text>
+                   </t:template>
+              </t:Column>
+
+
+              <!-- <t:Column label = "{i18n>XLBL_Curr}" >
+                   <t:template>
+                      <Text text="{Currency}"></Text>
+                   </t:template>
+              </t:Column> -->
+
+
+
+              <!-- <t:Column >
+                     <t:label>
+                          <Label text="Address"></Label>
+                     </t:label> 
+              </t:Column> -->
+
+
+
+
+              <t:Column >
+                     <t:label>
+                          <Label text="{i18n>XLBL_EmpGender}"></Label>
+                     </t:label> 
+                    <t:template>
+                      <Select selectedKey="{Gender}">
+                         <items>
+                            <core:Item text="Male" key="M"></core:Item>
+                            <core:Item text="Female" key="F"></core:Item>
+                         </items>
+                      </Select>
+                    </t:template>
+              </t:Column>
+
+              <t:Column >
+                     <t:label>
+                          <Label text="{i18n>XLBL_EmpSmokerTest}"></Label>
+                     </t:label> 
+                     <t:template>
+                      <CheckBox selected="{Smoker}"></CheckBox>
+                     </t:template>
+              </t:Column>
+
+              <t:Column >
+                     <t:label>
+                          <Label text="{i18n>XLBL_EmpRating}"></Label>
+                     </t:label> 
+                     <t:template>
+                       <RatingIndicator value="{Rating}"></RatingIndicator>
+                     </t:template>
+              </t:Column>
+
+
+
+              <t:Column label = "{i18n>XLBL_EmpStatus}" >
+                   <t:template>
+                      <Image src="{M.Status}" height="40px" width="40px"></Image>
+                   </t:template>
+              </t:Column>
+          
+          </t:columns>
+
+    </t:Table>
+
+
+   <form:SimpleForm id="Simpleformid" title="{i18n>XTIT_Title}" editable="true">
+        <!-- <form:title>
+             <core:Title text="PLEASE FILL THIS FORM"></core:Title>
+        </form:title> -->
+
+        <form:content>
+             <Label text="{i18n>XLBL_Name}"></Label>
+             <Input id="inpid1" width="40%" value="{Name}" />
+             <!-- <Input id="inpid1" width="40%" value="{/EmployeeData/1/Surname}" ></Input> -->
+
+             <!-- <Label text="Last-Name" ></Label>
+             <Input id="inpid2" width="40%" value="{Name}" ></Input> -->
+             <!-- <Input id="inpid2" width="40%" value="{path:'/EmployeeData/1/Name'}" enabled="{/EmployeeData/0/hunk}"></Input> -->
+
+             <!-- <Label text="Address"></Label>
+             <Input id="inpid3" width="70%" value="Aklera" enabled= "{/EmployeeData/0/hunk}" ></Input> -->
+             <!-- <Input id="inpid3" width="70%" value="Aklera" enabled="{= ${/EmployeeData/1/Name} === 'Ajay' ? false : true}" ></Input> -->
+
+             <Label text="{i18n>XLBL_Sal}"></Label>
+             <Input id="inid3" width="40%" value="{Salary}"></Input>
+             <!-- <Input id="inid3" width="40%" value="{/EmployeeData/2/Salary}"></Input> -->
+
+              <!-- If salary will be greater than 100000, then currency field will get gray out -->
+             <!-- <Label text="Currency"></Label>
+             <Input id="inid4" width="40%" enabled="{= ${/EmployeeData/2/Salary} > 100000 ? false : true}"></Input> -->
+
+             <!-- <Label text="DOB"></Label>
+             <DatePicker width="20%"></DatePicker> -->
+             <!-- <Input id="inpid4" width="30%"></Input> -->
+
+             <Label text="{i18n>XLBL_EmpID}" ></Label>
+             <Input id="inpEmpid" width="40%" value="{ID}" ></Input>
+
+             <Label text="{i18n>XLBL_EmpGender}"></Label>
+             <Input id="genderid" width="40%" value="{Gender}" />
+
+             
+             <Button text="{i18n>XBUT_Sub}" width="20%" press="onReload" ></Button>
+             <!-- <Label ></Label>
+            
+            <Button text="show" width="20%" press="onShowMe" ></Button>
+              <Label ></Label> -->
+             <!-- This button will take data from another model -->
+             
+        </form:content>
+   </form:SimpleForm>
+
+    
+
+
+</mvc:View>

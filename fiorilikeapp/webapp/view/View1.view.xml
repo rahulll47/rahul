@@ -1,0 +1,78 @@
+<mvc:View controllerName="capgemini.sa.finance.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+     <Page title = "{i18n>XTIT_VIEW1}">
+         <headerContent>
+            <Button text = "Go To" icon = "sap-icon://arrow-right" press="onNext"> </Button>
+         </headerContent>
+
+         
+         
+         <content>
+
+          <SearchField id="idSF" search="onSearch" liveChange="onSearch"></SearchField>
+
+          <List id="idLST" itemPress="onNavNext" mode="Delete" delete="onDelete"  items="{
+              path:'/fruits',
+              sorter:{
+                  path: 'name'
+              }
+            }">
+              
+             <items>
+
+                    <ObjectListItem type="Navigation" intro="{taste}" title="{name}" icon="{image}"  number="{price}" numberUnit="{curr}" >
+                    </ObjectListItem>
+                    <!-- <DisplayListItem label="{name}" ></DisplayListItem> -->
+               <!-- <DisplayListItem value="Explore fast and in deep" label="best career"></DisplayListItem>
+
+               <StandardListItem title="Orange" description="Most rich source of Vitamin C" 
+               icon="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVNEMSTQATazgrDw8OkRNyoKXMDuCw3VnWCQ&usqp=CAU"></StandardListItem>
+
+                <InputListItem>
+                   <HBox>
+                     <Label text="No of off Days you have?"></Label>
+                     <Input value=""></Input>
+                   </HBox>
+               </InputListItem>
+
+               <CustomListItem>
+                     <Label text="No of off Days you have?"></Label>
+                     <Input value=""></Input>
+                     <Switch/>
+               </CustomListItem>
+
+               <ObjectListItem title="Gym" intro="Must to build muscle" icon="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0o9lagCAr9-ow1z5MVbuH1FavB7GJTjR5wA&usqp=CAU" 
+                 number="500 INR" numberUnit="Per Month"> -->
+                       
+                        <!-- attribute is aggregation of ObjectListItem and it point to ObjectAttribute class -->
+                      <!-- <attributes>
+                          <ObjectAttribute text="Leg Day" title="Target Muscle"></ObjectAttribute>
+                          <ObjectAttribute text="Push-Pull-Leg" title="Workout Split"></ObjectAttribute>
+                      </attributes>
+
+                      <firstStatus>
+                         <ObjectStatus state="Success" text="Available"></ObjectStatus> -->
+                         <!--text will appear in certain and colour and 
+                         value of state will decide the colour of text, 
+                         like if state is success then green colour will appear
+                         And if state is error then text will appear in red colour
+                         & Warning- orange colour-->
+                      <!-- </firstStatus>
+                     
+                </ObjectListItem>
+  
+
+               <FeedListItem icon="https://oprice.in/wp-content/uploads/2021/04/Untitled-design-5.webp" 
+               sender="Aman Dhattarwal" text="Keep Going Buddy!!" timestamp="7th December 2021" ></FeedListItem>
+                 
+                 <ActionListItem press="onClick" text="Submit your entry"></ActionListItem> -->
+             </items>
+          </List>
+         </content>
+           
+         <!-- <Button text = "Go To" icon = "sap-icon://arrow-right" press="onNext"> </Button> -->
+     </Page>
+</mvc:View>
+
+    
+    
+

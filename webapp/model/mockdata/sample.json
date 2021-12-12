@@ -1,0 +1,52 @@
+{
+	"EmployeeData": [{
+			"Name": "Rahul",
+            "ID": 420,
+            "hunk": true,
+             "Salary":30000,
+             "Currency":"EUR",
+             "Gender":"M",
+            "Rating":1,
+            "Smoker":true,
+            "M.Status":"https://icon-library.com/images/woman-icon-png/woman-icon-png-26.jpg"
+            
+		},
+
+		{
+			"Name": "Ajay",
+            "ID": 421,
+            "Surname":"Jethi bhaiya",
+            "Salary":20000,
+            "Currency":"INR",
+            "Gender":"F",
+            "Rating":2,
+            "Smoker":false,
+            "M.Status":"https://cdn1.vectorstock.com/i/1000x1000/40/55/people-icon-male-and-female-signs-avatar-symbol-vector-18274055.jpg"
+           
+		},
+
+		{
+			"Name": "Vijay bhaiya",
+            "ID": 422,
+            "Salary":50000,
+            "Currency":"USD",
+            "Gender":"M",
+            "Rating":3,
+            "Smoker":true,
+            "M.Status":"https://icon-library.com/images/woman-icon-png/woman-icon-png-26.jpg"
+            
+        },
+        
+        {
+			"Name": "Anmol",
+            "ID": 550,
+            "Salary":100000,
+            "Currency":"BRL",
+            "Gender":"F",
+            "Rating":4,
+            "Smoker":false,
+            "M.Status":"https://cdn1.vectorstock.com/i/1000x1000/40/55/people-icon-male-and-female-signs-avatar-symbol-vector-18274055.jpg"
+           
+		}
+	]
+}

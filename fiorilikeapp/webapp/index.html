@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <script
+            src="resources/sap-ui-core.js"
+             data-sap-ui-libs="sap.m"
+            data-sap-ui-theme="sap_fiori_3"
+            data-sap-ui-resourceroots='{"capgemini.sa.finance": "./"}'
+            data-sap-ui-bindingSyntax="complex"
+        ></script>
+
+        <script>
+            
+            var oCompContainer = new sap.ui.core.ComponentContainer({
+                name: "capgemini.sa.finance"
+            });
+
+            oCompContainer.placeAt("content");
+        </script>
+    </head>
+    
+    <body class="sapUiBody">
+        <div id= "content"></div>
+    </body>
+        
+</html>

@@ -1,0 +1,47 @@
+<mvc:View controllerName="capgemini.sa.finance.controller.View2" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+   <Page title = "{i18n>XTIT_VIEW2}" showNavButton="true" navButtonPress="Back"> 
+         <!-- <Button text = "Back" icon = "sap-icon://arrow-left" press="onBack"> </Button>   -->
+          
+        <footer>
+           <Toolbar>
+              
+              <ToolbarSpacer></ToolbarSpacer>
+              <Button text="Order" type="Emphasized"></Button>
+              <Button text="Cancel" type="Reject"></Button>
+
+              
+             <Button text="Delete" type="Reject" press="onPress"></Button>
+            
+           </Toolbar>
+        </footer>
+
+        <content>
+
+            <List id="idLST" itemPress="onNavNext" mode="MultiSelect"   items="{
+                path:'/fruits',
+                sorter:{
+                    path: 'name'
+                }
+                }">
+              
+
+                   <items>
+                        <ObjectListItem type="Navigation" intro="{taste}" title="{name}" icon="{image}"  number="{price}" numberUnit="{curr}" >
+                        </ObjectListItem>
+                   </items>
+
+            </List>
+
+        </content>
+
+    </Page>
+
+</mvc:View>
+           
+
+<!--footer:-aggregation of Page control
+            it points to-sap.m.IBar
+            two of its subclasses-Toolbar & OverflowToolbar
+            Both of these have default aggregation=content
+            sap.m.ToolBarSpacer-subclass of sap.ui.core.Control
+    -->

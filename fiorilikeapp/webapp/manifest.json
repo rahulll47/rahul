@@ -1,0 +1,65 @@
+{
+        "_version": "1.9.0",
+
+
+        "sap.app":{
+            "id": "Capgemini.sa.payroll",
+            "description": "{{APP_DESCRIPTION}}",
+            "title": "{{APP_TITLE}}",
+            "applicationVersion": {"version": "1.2.2"},
+            "type": "application",
+            "i18n": "i18n/i18n.properties"
+        },
+
+
+
+        "sap.ui":{
+            "technology":"UI5",
+
+            "icons": {
+                        "icon":"sap-icon://home"
+            },
+
+             "deviceTypes":{
+                            "desktop": true,
+                            "phone": true,
+                            "tablet": true
+            }        
+        },
+
+
+
+
+        "sap.ui5":{
+             "library": {
+                 "css":"css/mystyle.css"
+             },
+
+             "dependencies":{ 
+                 "minUI5Version": "1.91.0",
+                 "libs": {
+                       "sap.m":{},
+                       "sap.ui.table":{}   
+                 }
+             },
+
+             "contentDensities": {
+                 "compact": true,
+                 "cozy": true
+             },
+
+             "models": {
+                 "i18n":{
+                     "type": "sap.ui.model.resource.ResourceModel",
+                     "uri": "i18n/i18n.properties"
+                 },
+                 "":{
+                     "type": "sap.ui.model.json.JSONModel",
+                     "uri":"model/mockdata/datadata.json"
+                 }
+             }
+
+            }
+
+
+}
